@@ -1,0 +1,20 @@
+<p>
+  <input [(ngModel)]="id">
+  <br/>
+  <br/>
+  <input  value="{{id}}" readonly>
+
+
+</p>
+
+<select [(ngModel)]="selected" name="status" placeholder="select Pok" (ngModelChange)="onOptionsSelected()" >
+  <option *ngFor="let pok of (pokdemo | filterPokemon:'name':searchString)" [ngValue]="pok">{{pok.name}}</option>
+</select>
+
+<div>
+  {{filtered|json}}
+</div>
+
+<br/>
+<br/>
+<input  value="" [(ngModel)]="searchString" >  <button (click)="goclick()" >GO</button>
