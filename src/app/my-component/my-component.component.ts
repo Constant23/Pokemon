@@ -44,7 +44,8 @@ export class MyComponentComponent implements OnInit {
   showPokemon() {
     this.pokemonService.getPokemon()
       .subscribe((data) => {
-        this.pokdemo = data.results;
+        /* tslint:disable:no-string-literal*/
+        this.pokdemo = data['results'];
       });
   }
 
