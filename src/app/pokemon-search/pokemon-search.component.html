@@ -1,0 +1,19 @@
+<p>
+  pokemon-search
+</p>
+
+<label>Numero Pokemon Or Name Pokemon</label>
+<input value="" [(ngModel)]="nameSearch">
+<br/><br/>
+<button (click)="searchPokemonClick(nameSearch)">Search Pokemon</button>
+<br/><br/>
+<table border="1">
+  <tr *ngFor="let pokemon of (pokemonListes)">
+    <td>{{pokemon.name}}.</td>
+    <td><a routerLink="/detail"> Détail </a></td>
+  </tr>
+</table>
+
+
+
+
